@@ -1,0 +1,31 @@
+{
+  "name": "@clicon/backend",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Vladyslav Kolhanov",
+  "license": "ISC",
+  "description": "Backend application for the Clicon project",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsx --watch --env-file .env src/index.ts",
+    "start": "node --env-file .env dist/index.js",
+    "build": "tsc --build",
+    "type-check": "tsc --noEmit --pretty",
+    "lint": "eslint --fix .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "@types/express": "^5.0.1",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.0"
+  }
+}
