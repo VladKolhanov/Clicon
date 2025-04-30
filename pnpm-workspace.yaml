@@ -1,0 +1,13 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+  - 'packages/configs/*'
+
+catalog:
+  eslint: ^9.25.1
+  typescript: ^5.8.3
+  prettier: ^3.5.3
+
+catalogs:
+  node:
+    '@types/node': ^22.15.3

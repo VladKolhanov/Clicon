@@ -5,27 +5,29 @@
   "author": "Vladyslav Kolhanov",
   "license": "ISC",
   "description": "Backend application for the Clicon project",
+  "type": "module",
   "main": "index.ts",
   "scripts": {
     "dev": "tsx --watch --env-file .env src/index.ts",
     "start": "node --env-file .env dist/index.js",
     "build": "tsc --build",
     "type-check": "tsc --noEmit --pretty",
-    "lint": "eslint --fix .",
-    "format": "prettier --write ."
+    "lint": "eslint",
+    "format": "prettier --check . --ignore-path ../../.gitignore"
   },
   "dependencies": {
     "express": "^5.1.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.25.1",
+    "@clicon/prettier-config": "workspace:*",
+    "@clicon/eslint-config": "workspace:*",
+    "@clicon/typescript": "workspace:*",
+    "prettier": "catalog:",
+    "eslint": "catalog:",
+    "typescript": "catalog:",
+    "@types/node": "catalog:node",
     "@types/express": "^5.0.1",
-    "eslint": "^9.25.1",
-    "eslint-config-prettier": "^10.1.2",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "prettier": "^3.5.3",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.31.0"
-  }
+    "tsx": "^4.19.3"
+  },
+  "prettier": "@clicon/prettier-config"
 }

@@ -1,0 +1,11 @@
+{
+  "name": "@clicon/typescript",
+  "version": "1.0.0",
+  "private": true,
+  "license": "ISC",
+  "type": "module",
+  "files": [
+    "./base.json",
+    "./backend.json"
+  ]
+}

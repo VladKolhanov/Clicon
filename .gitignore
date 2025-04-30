@@ -39,6 +39,9 @@ yarn-error.log*
 /blob-report/
 /playwright/.cache/
 
+# Other
+.cache
+.turbo
 *storybook.log
 /other
 TODO.md

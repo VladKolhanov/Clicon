@@ -1,0 +1,35 @@
+{
+  "name": "@clicon/eslint-config",
+  "version": "1.0.0",
+  "private": true,
+  "license": "ISC",
+  "type": "module",
+  "exports": {
+    "./base": "./base.js"
+  },
+  "scripts": {
+    "format": "prettier --check . --ignore-path ../../../.gitignore",
+    "type-check": "tsc --noEmit --pretty"
+  },
+  "dependencies": {
+    "@eslint/compat": "^1.2.8",
+    "@eslint/js": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-regexp": "^2.7.0",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-turbo": "^2.5.2",
+    "typescript-eslint": "^8.31.0"
+  },
+  "devDependencies": {
+    "@clicon/prettier-config": "workspace:*",
+    "@clicon/typescript": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "@types/node": "catalog:node",
+    "@types/eslint": "^9.6.1",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint-plugin-security": "^3.0.0"
+  },
+  "prettier": "@clicon/prettier-config"
+}
