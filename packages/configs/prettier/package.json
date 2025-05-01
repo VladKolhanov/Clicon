@@ -1,8 +1,8 @@
 {
   "name": "@clicon/prettier-config",
   "version": "1.0.0",
-  "license": "ISC",
   "private": true,
+  "license": "ISC",
   "type": "module",
   "exports": {
     ".": "./index.js"
@@ -11,8 +11,10 @@
     "format": "prettier --check . --ignore-path ../../../.gitignore",
     "type-check": "tsc --noEmit --pretty"
   },
+  "prettier": "@clicon/prettier-config",
   "dependencies": {
-    "prettier": "catalog:"
+    "prettier": "catalog:",
+    "prettier-plugin-packagejson": "^2.5.10"
   },
   "devDependencies": {
     "@clicon/typescript": "workspace:*",

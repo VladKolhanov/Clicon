@@ -4,8 +4,9 @@ import js from '@eslint/js'
 import prettierConfig from 'eslint-config-prettier'
 import * as regexpPlugin from 'eslint-plugin-regexp'
 import pluginSecurity from 'eslint-plugin-security'
-import tseslint from 'typescript-eslint'
+import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import turboPlugin from 'eslint-plugin-turbo'
+import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
   includeIgnoreFile(path.join(import.meta.dirname, '../../../.gitignore')),
@@ -14,6 +15,7 @@ export default tseslint.config(
     files: ['**/*.js', '**/*.ts', '**/*.tsx'],
     plugins: {
       turbo: turboPlugin,
+      'simple-import-sort': simpleImportSort,
     },
     extends: [
       js.configs.recommended,
@@ -26,6 +28,21 @@ export default tseslint.config(
     ],
     rules: {
       ...turboPlugin.configs.recommended.rules,
+
+      // Import rules
+      'simple-import-sort/imports': [
+        'warn',
+        {
+          groups: [
+            ['^\\u0000'],
+            ['^react', '^node:', '^(?!@clicon)(@?\\w)'],
+            ['^@clicon/\\w', '^@/\\w'],
+            ['^./', '^../'],
+          ],
+        },
+      ],
+
+      'simple-import-sort/exports': 'warn',
 
       // JS rules
       eqeqeq: 'error',
@@ -57,8 +74,8 @@ export default tseslint.config(
       '@typescript-eslint/unified-signatures': 'error',
       '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
       '@typescript-eslint/consistent-type-imports': [
-        'error',
-        { fixStyle: 'inline-type-imports' },
+        'warn',
+        { prefer: 'type-imports', fixStyle: 'separate-type-imports' },
       ],
       '@typescript-eslint/no-misused-promises': [
         'error',

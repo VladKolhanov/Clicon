@@ -1,33 +1,33 @@
 {
   "name": "@clicon/backend",
   "version": "1.0.0",
-  "keywords": [],
-  "author": "Vladyslav Kolhanov",
-  "license": "ISC",
   "description": "Backend application for the Clicon project",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Vladyslav Kolhanov",
   "type": "module",
   "main": "index.ts",
   "scripts": {
-    "dev": "tsx --watch --env-file .env src/index.ts",
-    "start": "node --env-file .env dist/index.js",
     "build": "tsc --build",
-    "type-check": "tsc --noEmit --pretty",
+    "dev": "tsx --watch --env-file .env src/index.ts",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
-    "format": "prettier --check . --ignore-path ../../.gitignore"
+    "start": "node --env-file .env dist/index.js",
+    "type-check": "tsc --noEmit --pretty"
   },
+  "prettier": "@clicon/prettier-config",
   "dependencies": {
     "express": "^5.1.0"
   },
   "devDependencies": {
-    "@clicon/prettier-config": "workspace:*",
     "@clicon/eslint-config": "workspace:*",
+    "@clicon/prettier-config": "workspace:*",
     "@clicon/typescript": "workspace:*",
-    "prettier": "catalog:",
-    "eslint": "catalog:",
-    "typescript": "catalog:",
-    "@types/node": "catalog:node",
     "@types/express": "^5.0.1",
-    "tsx": "^4.19.3"
-  },
-  "prettier": "@clicon/prettier-config"
+    "@types/node": "catalog:node",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "tsx": "^4.19.3",
+    "typescript": "catalog:"
+  }
 }
