@@ -13,10 +13,6 @@
     "incremental": true,
     "disableSourceOfProjectReferenceRedirect": true,
     "tsBuildInfoFile": "${configDir}/.cache/tsbuildinfo.json",
-    "baseUrl": "${configDir}",
-    "paths": {
-      "@/*": ["${configDir}/src/*"]
-    },
 
     "strict": true,
     "noUncheckedIndexedAccess": true,

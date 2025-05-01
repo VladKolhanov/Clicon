@@ -6,6 +6,10 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "allowSyntheticDefaultImports": true,
-    "noEmit": true
+    "noEmit": true,
+    "baseUrl": "${configDir}",
+    "paths": {
+      "~/*": ["${configDir}/src/*"]
+    }
   }
 }
