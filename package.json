@@ -14,7 +14,7 @@
     "format:fix": "turbo run format --continue -- --write --cache --cache-location .cache/.prettiercache",
     "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
     "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
-    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules dist"
+    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules dist .cache .turbo"
   },
   "devDependencies": {
     "@clicon/prettier-config": "workspace:*",
@@ -22,6 +22,6 @@
     "pkg-types": "^2.1.0",
     "turbo": "^2.5.2"
   },
-  "packageManager": "pnpm@10.2.1",
+  "packageManager": "pnpm@10.10.0",
   "prettier": "@clicon/prettier-config"
 }

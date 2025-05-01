@@ -18,7 +18,8 @@
       "dependsOn": ["^build"]
     },
     "format": {
-      "dependsOn": ["^format"]
+      "outputs": [".cache/.prettiercache"],
+      "outputLogs": "new-only"
     },
     "clean": {
       "cache": false
