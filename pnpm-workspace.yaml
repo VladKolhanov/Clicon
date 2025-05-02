@@ -9,5 +9,17 @@ catalog:
   prettier: ^3.5.3
 
 catalogs:
+  react-19:
+    react: ^19.1.0
+    react-dom: ^19.1.0
+    '@types/react': ^19.1.2
+    '@types/react-dom': ^19.1.2
+
+  react-router-7:
+    react-router: ^7.5.3
+    '@react-router/serve': ^7.5.3
+    '@react-router/node': '7.5.3'
+    '@react-router/dev': ^7.5.3
+
   node:
     '@types/node': ^22.15.3

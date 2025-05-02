@@ -24,5 +24,6 @@
     "clean": {
       "cache": false
     }
-  }
+  },
+  "globalPassThroughEnv": ["DEV"]
 }

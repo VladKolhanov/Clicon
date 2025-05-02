@@ -1,0 +1,37 @@
+{
+  "name": "@clicon/frontend",
+  "private": true,
+  "description": "Frontend application for the Clicon project",
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "start": "react-router-serve ./build/server/index.js",
+    "type-check": "react-router typegen && tsc"
+  },
+  "prettier": "@clicon/prettier-config",
+  "dependencies": {
+    "@react-router/node": "catalog:react-router-7",
+    "@react-router/serve": "catalog:react-router-7",
+    "isbot": "^5.1.27",
+    "react": "catalog:react-19",
+    "react-dom": "catalog:react-19",
+    "react-router": "catalog:react-router-7"
+  },
+  "devDependencies": {
+    "@clicon/eslint-config": "workspace:*",
+    "@clicon/prettier-config": "workspace:*",
+    "@clicon/typescript": "workspace:*",
+    "@react-router/dev": "catalog:react-router-7",
+    "@types/node": "catalog:node",
+    "@types/react": "catalog:react-19",
+    "@types/react-dom": "catalog:react-19",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "vite": "^6.3.3",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
