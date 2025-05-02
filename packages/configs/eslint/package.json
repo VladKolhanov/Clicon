@@ -5,7 +5,10 @@
   "license": "ISC",
   "type": "module",
   "exports": {
-    "./base": "./base.js"
+    ".": {
+      "default": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
   },
   "scripts": {
     "format": "prettier --check . --ignore-path ../../../.gitignore",
@@ -17,6 +20,9 @@
     "@eslint/compat": "^1.2.8",
     "@eslint/js": "^9.25.1",
     "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
@@ -30,6 +36,7 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-security": "^3.0.0",
     "@types/node": "catalog:node",
+    "@typescript-eslint/utils": "^8.31.1",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"

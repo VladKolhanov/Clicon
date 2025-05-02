@@ -9,7 +9,7 @@ import turboPlugin from 'eslint-plugin-turbo'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
-  includeIgnoreFile(path.join(import.meta.dirname, '../../../.gitignore')),
+  includeIgnoreFile(path.join(import.meta.dirname, '../../../../.gitignore')),
   { ignores: ['**/*.config.*'] },
   {
     files: ['**/*.js', '**/*.ts', '**/*.tsx'],

@@ -1,3 +1,3 @@
-import baseConfig from '@clicon/eslint-config/base'
+import { baseConfig } from '@clicon/eslint-config'
 
 export default [...baseConfig]
