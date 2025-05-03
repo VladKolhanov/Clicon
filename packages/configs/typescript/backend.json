@@ -1,12 +1,20 @@
 {
   "extends": "./base.json",
+  "exclude": ["node_modules", "dist", "${configDir}/src/**/*.test.ts"],
+  "include": ["${configDir}/src/**/*"],
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2022"],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "allowSyntheticDefaultImports": true,
-    "noEmit": true,
+    "types": ["node", "express"],
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "rootDir": "${configDir}/src",
+    "outDir": "${configDir}/dist/",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
     "baseUrl": "${configDir}",
     "paths": {
       "~/*": ["${configDir}/src/*"]
