@@ -17,12 +17,17 @@
   },
   "prettier": "@clicon/prettier-config",
   "dependencies": {
-    "express": "^5.1.0"
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0"
   },
   "devDependencies": {
     "@clicon/eslint-config": "workspace:*",
     "@clicon/prettier-config": "workspace:*",
     "@clicon/typescript": "workspace:*",
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
     "@types/node": "catalog:node",
     "eslint": "catalog:",
