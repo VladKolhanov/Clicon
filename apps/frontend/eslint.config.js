@@ -1,3 +1,7 @@
-import { baseConfig, reactConfig } from '@clicon/eslint-config'
+import {
+  baseConfig,
+  reactConfig,
+  restrictEnvAccess,
+} from '@clicon/eslint-config'
 
-export default [...baseConfig, ...reactConfig]
+export default [...baseConfig, ...reactConfig, ...restrictEnvAccess]

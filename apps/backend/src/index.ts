@@ -2,16 +2,17 @@ import compression from 'compression'
 import cors from 'cors'
 import express from 'express'
 
+import { ENV } from '~/libs/env'
 import { apiLimiter } from '~/middlewares/rateLimiter'
 import router from '~/router'
 
 const app = express()
-const port = process.env.PORT
-const apiPrefix = process.env.DEFAULT_API_PREFIX ?? '/api'
+const port = ENV.PORT
+const apiPrefix = ENV.DEFAULT_API_PREFIX
 
 app.use(
   cors({
-    origin: process.env.CLIENT_DEV_SERVER_URL ?? '*',
+    origin: ENV.CLIENT_DEV_SERVER_URL,
     optionsSuccessStatus: 200,
     credentials: true,
   })

@@ -8,6 +8,33 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import turboPlugin from 'eslint-plugin-turbo'
 import tseslint from 'typescript-eslint'
 
+export const restrictEnvAccess = tseslint.config(
+  { ignores: ['**/env.ts'] },
+  {
+    files: ['**/*.js', '**/*.ts', '**/*.tsx'],
+    rules: {
+      'no-restricted-properties': [
+        'error',
+        {
+          object: 'process',
+          property: 'env',
+          message:
+            "Use `import { env } from '~/libs/env'` instead to ensure validated types.",
+        },
+      ],
+      'no-restricted-imports': [
+        'error',
+        {
+          name: 'process',
+          importNames: ['env'],
+          message:
+            "Use `import { env } from '~/libs/env'` instead to ensure validated types.",
+        },
+      ],
+    },
+  }
+)
+
 export default tseslint.config(
   includeIgnoreFile(path.join(import.meta.dirname, '../../../../.gitignore')),
   { ignores: ['**/*.config.*'] },

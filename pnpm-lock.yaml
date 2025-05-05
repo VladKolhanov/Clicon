@@ -15,6 +15,9 @@ catalogs:
     typescript:
       specifier: ^5.8.3
       version: 5.8.3
+    zod:
+      specifier: ^3.24.4
+      version: 3.24.4
   node:
     '@types/node':
       specifier: ^22.15.3
@@ -77,6 +80,9 @@ importers:
       express-rate-limit:
         specifier: ^7.5.0
         version: 7.5.0(express@5.1.0)
+      zod:
+        specifier: 'catalog:'
+        version: 3.24.4
     devDependencies:
       '@clicon/eslint-config':
         specifier: workspace:*
@@ -132,6 +138,9 @@ importers:
       react-router:
         specifier: catalog:react-router-7
         version: 7.5.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      zod:
+        specifier: 'catalog:'
+        version: 3.24.4
     devDependencies:
       '@clicon/eslint-config':
         specifier: workspace:*
@@ -2800,6 +2809,9 @@ packages:
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  zod@3.24.4:
+    resolution: {integrity: sha512-OdqJE9UDRPwWsrHjLN2F8bPxvwJBK22EHLWtanu0LSYr5YqzsaaW3RMgmjwr8Rypg5k+meEJdSPXJZXE/yqOMg==}
 
 snapshots:
 
@@ -5666,3 +5678,5 @@ snapshots:
   yallist@3.1.1: {}
 
   yocto-queue@0.1.0: {}
+
+  zod@3.24.4: {}

@@ -1,3 +1,5 @@
+import { ENV } from '~/libs/env'
+
 import type { Route } from './+types/home'
 
 interface HealthCheck {
@@ -7,8 +9,7 @@ interface HealthCheck {
 }
 
 export async function clientLoader() {
-  const res = await fetch(`http://localhost:3000/api/health`)
-
+  const res = await fetch(`${ENV.VITE_API_URL}/health`)
   const data = (await res.json()) as HealthCheck
 
   return data

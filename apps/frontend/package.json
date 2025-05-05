@@ -18,7 +18,8 @@
     "isbot": "^5.1.27",
     "react": "catalog:react-19",
     "react-dom": "catalog:react-19",
-    "react-router": "catalog:react-router-7"
+    "react-router": "catalog:react-router-7",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@clicon/eslint-config": "workspace:*",

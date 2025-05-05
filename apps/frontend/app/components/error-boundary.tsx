@@ -1,5 +1,7 @@
 import { isRouteErrorResponse } from 'react-router'
 
+import { ENV } from '~/libs/env'
+
 import type { Route } from '../+types/root'
 
 export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps) => {
@@ -13,7 +15,7 @@ export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps) => {
       error.status === 404
         ? 'The requested page could not be found.'
         : error.statusText || details
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
+  } else if (ENV.DEV && error && error instanceof Error) {
     details = error.message
     stack = error.stack
   }

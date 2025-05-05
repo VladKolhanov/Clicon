@@ -1,5 +1,7 @@
 import type { Response } from 'express'
 
+import { ENV } from '~/libs/env'
+
 export class ApiResponse {
   static success(
     res: Response,
@@ -23,7 +25,7 @@ export class ApiResponse {
       success: false,
       message,
       code,
-      ...(process.env.NODE_ENV === 'development' && {
+      ...(ENV.NODE_ENV === 'development' && {
         stack: new Error().stack,
       }),
     })
