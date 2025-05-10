@@ -43,6 +43,7 @@ yarn-error.log*
 build/
 
 # Other
+logs
 .cache
 .turbo
 *storybook.log

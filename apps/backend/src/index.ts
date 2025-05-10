@@ -3,6 +3,8 @@ import cors from 'cors'
 import express from 'express'
 
 import { ENV } from '~/libs/env'
+import { logger } from '~/libs/logger'
+import { httpLoggerMiddleware } from '~/middlewares/httpLogger'
 import { apiLimiter } from '~/middlewares/rateLimiter'
 import router from '~/router'
 
@@ -10,6 +12,7 @@ const app = express()
 const port = ENV.PORT
 const apiPrefix = ENV.DEFAULT_API_PREFIX
 
+app.use(httpLoggerMiddleware)
 app.use(
   cors({
     origin: ENV.CLIENT_DEV_SERVER_URL,
@@ -25,5 +28,5 @@ app.use(apiPrefix, apiLimiter)
 app.use(apiPrefix, router)
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}...`)
+  logger.info(`Server running on port ${port}...`)
 })
