@@ -2,25 +2,27 @@ import { ENV } from '~/libs/env'
 
 import type { Route } from './+types/home'
 
-interface HealthCheck {
-  status: string
+interface HealthCheckData {
   timestamp: string
-  uptime: number
+}
+
+interface ResponseData {
+  status: boolean
+  message: string
+  data: HealthCheckData
 }
 
 export async function clientLoader() {
   const res = await fetch(`${ENV.VITE_API_URL}/health`)
-  const data = (await res.json()) as HealthCheck
+  const data = (await res.json()) as ResponseData
 
-  return data
+  return data.data
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
   return (
     <div>
-      <p>{loaderData.status}</p>
       <p>{loaderData.timestamp}</p>
-      <p>{loaderData.uptime}</p>
     </div>
   )
 }

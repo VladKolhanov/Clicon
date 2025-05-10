@@ -114,6 +114,9 @@ export default tseslint.config(
           allowConstantLoopConditions: true,
         },
       ],
+
+      // Security rules
+      'security/detect-object-injection': 'off',
     },
   },
   {

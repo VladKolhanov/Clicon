@@ -1,33 +1,37 @@
 import type { Response } from 'express'
 
-import { ENV } from '~/libs/env'
+import { HttpCode, type HttpCodeNames } from '~/config'
+
+interface CreateApiResponse {
+  name: Lowercase<HttpCodeNames>
+  message?: string
+  data?: unknown
+}
 
 export class ApiResponse {
-  static success(
+  static create(
     res: Response,
-    data: unknown = null,
-    message = 'Success'
+    { name, message, data }: CreateApiResponse
   ): void {
-    res.status(200).json({
-      success: true,
-      message,
-      data,
-    })
-  }
+    const nameUpperCase = name.toUpperCase() as Uppercase<HttpCodeNames>
+    const statusCode = HttpCode[nameUpperCase]
 
-  static error(
-    res: Response,
-    message: string,
-    statusCode = 400,
-    code?: string
-  ): void {
-    res.status(statusCode).json({
-      success: false,
-      message,
-      code,
-      ...(ENV.NODE_ENV === 'development' && {
-        stack: new Error().stack,
-      }),
-    })
+    const isSuccess = statusCode.toString().startsWith('2')
+    const messagef = `${name} ${message ? `| ${message}` : ''}`
+
+    if (isSuccess) {
+      res.status(statusCode).json({
+        isSuccess,
+        code: statusCode,
+        message: messagef,
+        data,
+      })
+    } else {
+      res.status(statusCode).json({
+        isSuccess,
+        code: statusCode,
+        message: messagef,
+      })
+    }
   }
 }
