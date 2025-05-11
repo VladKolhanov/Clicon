@@ -1,4 +1,4 @@
-import { ENV } from '~/libs/env'
+import { ENV, isDev } from '~/libs/env'
 
 export const HttpCode = {
   OK: 200,
@@ -12,9 +12,10 @@ export const HttpCode = {
 } as const satisfies Record<string, number>
 
 export type HttpCodeNames = keyof typeof HttpCode
+export type HttpCodesType = (typeof HttpCode)[keyof typeof HttpCode]
 
 export const corsOptions = {
-  origin: ENV.NODE_ENV === 'development' ? '*' : ENV.CLIENT_DEV_SERVER_URL,
+  origin: isDev ? '*' : ENV.CLIENT_DEV_SERVER_URL,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,

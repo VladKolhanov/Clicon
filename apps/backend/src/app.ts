@@ -5,11 +5,11 @@ import express, { type Express } from 'express'
 import { corsOptions } from '~/config'
 import { ENV } from '~/libs/env'
 import { logger } from '~/libs/logger'
+import { errorHandler } from '~/middlewares/errorHandler'
 import { httpLoggerMiddleware } from '~/middlewares/httpLogger'
 import { apiLimiter } from '~/middlewares/rateLimiter'
 import router from '~/router'
-
-import { ApiResponse } from './utils/apiResponse'
+import { ApiResponse } from '~/utils/apiResponse'
 
 export class App {
   app: Express
@@ -22,6 +22,7 @@ export class App {
     this.apiPrefix = ENV.DEFAULT_API_PREFIX
     this.initMiddlewares()
     this.setupRouter()
+    this.initErrorHandle()
   }
 
   listen() {
@@ -44,9 +45,13 @@ export class App {
 
     this.app.use((_req, res) => {
       ApiResponse.create(res, {
-        name: 'not_found',
+        httpCodeName: 'not_found',
         message: "This endpoint doesn't exist.",
       })
     })
+  }
+
+  private initErrorHandle() {
+    this.app.use(errorHandler)
   }
 }
