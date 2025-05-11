@@ -4,6 +4,11 @@ import type { Route } from './+types/home'
 
 interface HealthCheckData {
   timestamp: string
+  uptime: number
+  memoryUsage: Record<string, number>
+  cpuUsage: Record<string, number>
+  nodeVersion: string
+  pid: number
 }
 
 interface ResponseData {
@@ -23,6 +28,9 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   return (
     <div>
       <p>{loaderData.timestamp}</p>
+      <p>{loaderData.uptime}</p>
+      <p>{loaderData.nodeVersion}</p>
+      <p>{loaderData.pid}</p>
     </div>
   )
 }

@@ -7,9 +7,9 @@ import { ENV } from '~/libs/env'
 import { logger } from '~/libs/logger'
 import { errorHandler } from '~/middlewares/errorHandler'
 import { httpLoggerMiddleware } from '~/middlewares/httpLogger'
+import { notFound } from '~/middlewares/notFound'
 import { apiLimiter } from '~/middlewares/rateLimiter'
-import router from '~/router'
-import { ApiResponse } from '~/utils/apiResponse'
+import { monitoringRouter } from '~/routes/monitoring.router'
 
 export class App {
   app: Express
@@ -41,14 +41,8 @@ export class App {
   }
 
   private setupRouter() {
-    this.app.use(this.apiPrefix, router)
-
-    this.app.use((_req, res) => {
-      ApiResponse.create(res, {
-        httpCodeName: 'not_found',
-        message: "This endpoint doesn't exist.",
-      })
-    })
+    this.app.use(this.apiPrefix, monitoringRouter)
+    this.app.use(notFound)
   }
 
   private initErrorHandle() {
