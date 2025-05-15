@@ -8,17 +8,16 @@
     },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "outputs": ["build/**"]
     },
     "type-check": {
       "dependsOn": ["^type-check"],
       "inputs": ["**/*.{ts,tsx}"]
     },
     "lint": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^lint"]
     },
     "format": {
-      "outputs": [".cache/.prettiercache"],
       "outputLogs": "new-only"
     },
     "clean": {
