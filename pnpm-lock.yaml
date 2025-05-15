@@ -56,9 +56,6 @@ importers:
       '@clicon/prettier-config':
         specifier: workspace:*
         version: link:packages/configs/prettier
-      pkg-types:
-        specifier: ^2.1.0
-        version: 2.1.0
       prettier:
         specifier: 'catalog:'
         version: 3.5.3
@@ -260,6 +257,9 @@ importers:
 
   packages/configs/prettier:
     dependencies:
+      pkg-types:
+        specifier: ^2.1.0
+        version: 2.1.0
       prettier:
         specifier: 'catalog:'
         version: 3.5.3

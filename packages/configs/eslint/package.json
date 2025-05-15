@@ -2,7 +2,6 @@
   "name": "@clicon/eslint-config",
   "version": "1.0.0",
   "private": true,
-  "license": "ISC",
   "type": "module",
   "exports": {
     ".": {

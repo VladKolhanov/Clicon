@@ -14,12 +14,11 @@
     "lint": "turbo run lint --continue",
     "lint:fix": "turbo run lint --continue -- --fix",
     "start": "turbo run start",
-    "type-check": "turbo run type-check"
+    "type-check": "turbo run type-check --continue"
   },
   "prettier": "@clicon/prettier-config",
   "devDependencies": {
     "@clicon/prettier-config": "workspace:*",
-    "pkg-types": "^2.1.0",
     "prettier": "catalog:",
     "turbo": "^2.5.2"
   },

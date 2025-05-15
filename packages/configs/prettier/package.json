@@ -2,7 +2,6 @@
   "name": "@clicon/prettier-config",
   "version": "1.0.0",
   "private": true,
-  "license": "ISC",
   "type": "module",
   "exports": {
     ".": "./index.js"
@@ -13,6 +12,7 @@
   },
   "prettier": "@clicon/prettier-config",
   "dependencies": {
+    "pkg-types": "^2.1.0",
     "prettier": "catalog:",
     "prettier-plugin-packagejson": "^2.5.10"
   },
