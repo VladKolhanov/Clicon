@@ -12,7 +12,6 @@
 
     "incremental": true,
     "disableSourceOfProjectReferenceRedirect": true,
-    "tsBuildInfoFile": "${configDir}/.cache/tsbuildinfo.json",
 
     "strict": true,
     "noUncheckedIndexedAccess": true,
@@ -20,7 +19,12 @@
 
     "module": "Preserve",
     "moduleResolution": "Bundler",
-    "noEmit": true
+    "noEmit": true,
+    "tsBuildInfoFile": "${configDir}/.cache/tsbuildinfo.json"
   },
-  "exclude": ["node_modules", "build", "dist"]
+  "exclude": [
+    "${configDir}/node_modules",
+    "${configDir}/build",
+    "${configDir}/dist"
+  ]
 }

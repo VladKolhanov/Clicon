@@ -2,13 +2,12 @@
   "name": "@clicon/backend",
   "version": "1.0.0",
   "description": "Backend application for the Clicon project",
-  "keywords": [],
   "license": "ISC",
   "author": "Vladyslav Kolhanov",
   "type": "module",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "pnpm run lint && pnpm run type-check && tsup",
     "dev": "tsx --watch --env-file .env src/index.ts",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
@@ -27,6 +26,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@clicon/database": "workspace:*",
     "@clicon/eslint-config": "workspace:*",
     "@clicon/prettier-config": "workspace:*",
     "@clicon/typescript": "workspace:*",
@@ -37,6 +37,7 @@
     "@types/node": "catalog:node",
     "eslint": "catalog:",
     "prettier": "catalog:",
+    "tsup": "catalog:",
     "tsx": "^4.19.3",
     "typescript": "catalog:"
   }

@@ -1,0 +1,45 @@
+{
+  "name": "@clicon/database",
+  "version": "1.0.0",
+  "private": true,
+  "license": "ISC",
+  "type": "module",
+  "exports": {
+    "./client": {
+      "types": "./dist/dbClient.d.ts",
+      "default": "./dist/dbClient.js"
+    },
+    "./schema": {
+      "types": "./dist/schema.d.ts",
+      "default": "./dist/schema.js"
+    }
+  },
+  "scripts": {
+    "build": "pnpm run lint && pnpm run type-check && tsup",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "type-check": "tsc --noEmit --pretty"
+  },
+  "prettier": "@clicon/prettier-config",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.43.1",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@clicon/eslint-config": "workspace:*",
+    "@clicon/prettier-config": "workspace:*",
+    "@clicon/typescript": "workspace:*",
+    "drizzle-kit": "^0.31.1",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "tsup": "catalog:",
+    "tsx": "^4.19.3",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@10.10.0"
+}

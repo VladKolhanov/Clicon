@@ -4,11 +4,14 @@
     "dev": {
       "persistent": true,
       "cache": false,
-      "env": ["PORT"]
+      "dependsOn": ["^build"],
+      "env": ["PORT"],
+      "inputs": ["$TURBO_DEFAULT$", ".env"]
     },
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["build/**"]
+      "dependsOn": ["^build", "lint", "type-check"],
+      "outputs": ["dist/**", "build/**"],
+      "inputs": ["$TURBO_DEFAULT$", "!.env.sample", ".env"]
     },
     "type-check": {
       "dependsOn": ["^type-check"],
@@ -22,8 +25,26 @@
     },
     "clean": {
       "cache": false
+    },
+    "db:generate": {
+      "outputs": ["migrations/**"]
+    },
+    "db:push": {
+      "cache": false
+    },
+    "db:migrate": {
+      "cache": false
+    },
+    "db:studio": {
+      "persistent": true,
+      "cache": false
     }
   },
-  "globalEnv": ["NODE_ENV", "DEFAULT_API_PREFIX", "CLIENT_DEV_SERVER_URL"],
+  "globalEnv": [
+    "NODE_ENV",
+    "DEFAULT_API_PREFIX",
+    "CLIENT_DEV_SERVER_URL",
+    "DATABASE_URL"
+  ],
   "globalPassThroughEnv": ["DEV"]
 }

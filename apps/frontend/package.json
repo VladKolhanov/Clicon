@@ -22,6 +22,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@clicon/database": "workspace:*",
     "@clicon/eslint-config": "workspace:*",
     "@clicon/prettier-config": "workspace:*",
     "@clicon/typescript": "workspace:*",
