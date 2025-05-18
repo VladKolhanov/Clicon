@@ -1,0 +1,26 @@
+{
+  "name": "@clicon/tsup-config",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "format": "prettier --check . --ignore-path ../../../.gitignore",
+    "lint": "eslint",
+    "type-check": "tsc --noEmit --pretty"
+  },
+  "prettier": "@clicon/prettier-config",
+  "dependencies": {
+    "tsup": "catalog:"
+  },
+  "devDependencies": {
+    "@clicon/eslint-config": "workspace:*",
+    "@clicon/prettier-config": "workspace:*",
+    "@clicon/typescript-config": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@10.10.0"
+}

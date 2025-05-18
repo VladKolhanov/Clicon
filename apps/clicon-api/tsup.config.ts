@@ -1,14 +1,7 @@
+import baseTsupConfig from '@clicon/tsup-config'
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
+  ...baseTsupConfig,
   entry: ['./src/index.ts'],
-  splitting: false,
-  bundle: true,
-  outDir: './dist',
-  clean: true,
-  loader: { '.json': 'copy' },
-  minify: true,
-  sourcemap: true,
-  format: ['esm'],
-  treeshake: true,
 })

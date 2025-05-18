@@ -1,15 +1,8 @@
+import baseTsupConfig from '@clicon/tsup-config'
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
+  ...baseTsupConfig,
   entry: ['./src/dbClient.ts', './src/schema.ts'],
-  splitting: false,
-  bundle: true,
-  outDir: './dist',
-  clean: true,
   dts: true,
-  loader: { '.json': 'copy' },
-  minify: true,
-  sourcemap: true,
-  format: ['esm'],
-  treeshake: true,
 })

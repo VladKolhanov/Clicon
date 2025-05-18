@@ -32,6 +32,7 @@
   "devDependencies": {
     "@clicon/eslint-config": "workspace:*",
     "@clicon/prettier-config": "workspace:*",
+    "@clicon/tsup-config": "workspace:*",
     "@clicon/typescript-config": "workspace:*",
     "drizzle-kit": "^0.31.1",
     "eslint": "catalog:",
