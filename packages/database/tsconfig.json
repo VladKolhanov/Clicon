@@ -1,8 +1,6 @@
 {
-  "extends": "@clicon/typescript/base.json",
-  "include": ["./src/**/*"],
-  "compilerOptions": {
-    "declaration": true,
-    "emitDeclarationOnly": true
-  }
+  "extends": [
+    "@clicon/typescript/base.json",
+    "@clicon/typescript/declaration-only.json"
+  ]
 }
