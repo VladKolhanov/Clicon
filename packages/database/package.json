@@ -2,7 +2,6 @@
   "name": "@clicon/database",
   "version": "1.0.0",
   "private": true,
-  "license": "ISC",
   "type": "module",
   "exports": {
     "./client": {
@@ -33,7 +32,7 @@
   "devDependencies": {
     "@clicon/eslint-config": "workspace:*",
     "@clicon/prettier-config": "workspace:*",
-    "@clicon/typescript": "workspace:*",
+    "@clicon/typescript-config": "workspace:*",
     "drizzle-kit": "^0.31.1",
     "eslint": "catalog:",
     "prettier": "catalog:",

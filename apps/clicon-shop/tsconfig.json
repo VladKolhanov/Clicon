@@ -1,6 +1,6 @@
 {
   "extends": [
     "@clicon/typescript-config/base",
-    "@clicon/typescript-config/declaration-only"
+    "@clicon/typescript-config/react"
   ]
 }

@@ -6,7 +6,7 @@
   "exports": {
     ".": {
       "default": "./src/index.js",
-      "types": "./src/index.d.ts"
+      "types": "./src/types/index.d.ts"
     }
   },
   "scripts": {
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@clicon/prettier-config": "workspace:*",
-    "@clicon/typescript": "workspace:*",
+    "@clicon/typescript-config": "workspace:*",
     "@types/eslint": "^9.6.1",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-security": "^3.0.0",

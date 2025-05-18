@@ -1,5 +1,11 @@
 {
-  "name": "@clicon/typescript",
+  "name": "@clicon/typescript-config",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "exports": {
+    "./base": "./src/base.json",
+    "./api": "./src/api.json",
+    "./react": "./src/react.json",
+    "./declaration-only": "./src/declaration-only.json"
+  }
 }

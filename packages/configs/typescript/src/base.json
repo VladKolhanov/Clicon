@@ -1,6 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "rootDir": "${configDir}",
+    "outDir": "${configDir}/dist",
+
     "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "ES2022",
@@ -15,16 +18,21 @@
 
     "strict": true,
     "noUncheckedIndexedAccess": true,
+    "strictNullChecks": true,
     "checkJs": true,
+    "forceConsistentCasingInFileNames": true,
 
     "module": "Preserve",
     "moduleResolution": "Bundler",
     "noEmit": true,
+    "sourceMap": true,
     "tsBuildInfoFile": "${configDir}/.cache/tsbuildinfo.json"
   },
+  "include": ["${configDir}/src/**/*", "${configDir}/app/**/*"],
   "exclude": [
     "${configDir}/node_modules",
-    "${configDir}/build",
-    "${configDir}/dist"
+    "${configDir}/build/**/*",
+    "${configDir}/dist/**/*",
+    "${configDir}/**/*.test.ts"
   ]
 }

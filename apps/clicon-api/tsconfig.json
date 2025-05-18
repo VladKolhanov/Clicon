@@ -1,0 +1,3 @@
+{
+  "extends": ["@clicon/typescript-config/base", "@clicon/typescript-config/api"]
+}

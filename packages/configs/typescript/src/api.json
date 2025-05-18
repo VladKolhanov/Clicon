@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": ["${configDir}/src/**/*"],
+  "compilerOptions": {
+    "rootDir": "${configDir}",
+    "outDir": "${configDir}/dist",
+    
+    "types": ["node", "express"],
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+
+    "baseUrl": "${configDir}",
+    "paths": {
+      "~/*": ["${configDir}/src/*"]
+    }
+  }
+}

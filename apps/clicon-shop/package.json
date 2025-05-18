@@ -1,7 +1,9 @@
 {
-  "name": "@clicon/frontend",
+  "name": "@clicon/shop",
   "private": true,
   "description": "Frontend application for the Clicon project",
+  "license": "ISC",
+  "author": "Vladyslav Kolhanov",
   "type": "module",
   "scripts": {
     "build": "react-router build",
@@ -25,7 +27,7 @@
     "@clicon/database": "workspace:*",
     "@clicon/eslint-config": "workspace:*",
     "@clicon/prettier-config": "workspace:*",
-    "@clicon/typescript": "workspace:*",
+    "@clicon/typescript-config": "workspace:*",
     "@react-router/dev": "catalog:react-router-7",
     "@types/node": "catalog:node",
     "@types/react": "catalog:react-19",

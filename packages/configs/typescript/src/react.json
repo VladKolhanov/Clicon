@@ -1,25 +1,21 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "./base.json",
   "include": [
     "${configDir}/**/*",
     "${configDir}/**/.server/**/*",
     "${configDir}/**/.client/**/*",
     "${configDir}/.react-router/types/**/*"
   ],
-  "exclude": [
-    "node_modules",
-    "${configDir}/build/**/*",
-    "${configDir}/dist/**/*"
-  ],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "rootDirs": ["${configDir}", "${configDir}/.react-router/types"],
+    "outDir": "${configDir}/dist",
+    
     "types": ["vite/client"],
-    "target": "ES2022",
     "module": "ES2022",
     "moduleResolution": "bundler",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "jsx": "react-jsx",
-    "rootDirs": ["${configDir}", "${configDir}/.react-router/types"],
+    
     "baseUrl": "${configDir}",
     "paths": {
       "~/*": ["${configDir}/app/*"]

@@ -1,7 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Declaration Only",
-  "include": ["${configDir}/src/**/*"],
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true
