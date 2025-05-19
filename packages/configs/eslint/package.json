@@ -1,5 +1,5 @@
 {
-  "name": "@clicon/eslint-config",
+  "name": "@easymart/eslint-config",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -14,7 +14,7 @@
     "lint": "eslint",
     "type-check": "tsc --noEmit --pretty"
   },
-  "prettier": "@clicon/prettier-config",
+  "prettier": "@easymart/prettier-config",
   "dependencies": {
     "@eslint/compat": "^1.2.8",
     "@eslint/js": "^9.25.1",
@@ -29,8 +29,8 @@
     "typescript-eslint": "^8.31.0"
   },
   "devDependencies": {
-    "@clicon/prettier-config": "workspace:*",
-    "@clicon/typescript-config": "workspace:*",
+    "@easymart/prettier-config": "workspace:*",
+    "@easymart/typescript-config": "workspace:*",
     "@types/eslint": "^9.6.1",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-security": "^3.0.0",

@@ -1,5 +1,5 @@
 {
-  "name": "@clicon/database",
+  "name": "@easymart/database",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -23,17 +23,17 @@
     "lint": "eslint",
     "type-check": "tsc --noEmit --pretty"
   },
-  "prettier": "@clicon/prettier-config",
+  "prettier": "@easymart/prettier-config",
   "dependencies": {
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.43.1",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@clicon/eslint-config": "workspace:*",
-    "@clicon/prettier-config": "workspace:*",
-    "@clicon/tsup-config": "workspace:*",
-    "@clicon/typescript-config": "workspace:*",
+    "@easymart/eslint-config": "workspace:*",
+    "@easymart/prettier-config": "workspace:*",
+    "@easymart/tsup-config": "workspace:*",
+    "@easymart/typescript-config": "workspace:*",
     "drizzle-kit": "^0.31.1",
     "eslint": "catalog:",
     "prettier": "catalog:",

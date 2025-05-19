@@ -1,6 +1,6 @@
 {
   "extends": [
-    "@clicon/typescript-config/base",
-    "@clicon/typescript-config/declaration-only"
+    "@easymart/typescript-config/base",
+    "@easymart/typescript-config/declaration-only"
   ]
 }

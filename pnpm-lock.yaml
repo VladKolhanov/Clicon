@@ -56,7 +56,7 @@ importers:
 
   .:
     devDependencies:
-      '@clicon/prettier-config':
+      '@easymart/prettier-config':
         specifier: workspace:*
         version: link:packages/configs/prettier
       prettier:
@@ -93,19 +93,19 @@ importers:
         specifier: 'catalog:'
         version: 3.24.4
     devDependencies:
-      '@clicon/database':
+      '@easymart/database':
         specifier: workspace:*
         version: link:../../packages/database
-      '@clicon/eslint-config':
+      '@easymart/eslint-config':
         specifier: workspace:*
         version: link:../../packages/configs/eslint
-      '@clicon/prettier-config':
+      '@easymart/prettier-config':
         specifier: workspace:*
         version: link:../../packages/configs/prettier
-      '@clicon/tsup-config':
+      '@easymart/tsup-config':
         specifier: workspace:*
         version: link:../../packages/configs/tsup
-      '@clicon/typescript-config':
+      '@easymart/typescript-config':
         specifier: workspace:*
         version: link:../../packages/configs/typescript
       '@types/compression':
@@ -163,16 +163,16 @@ importers:
         specifier: 'catalog:'
         version: 3.24.4
     devDependencies:
-      '@clicon/database':
+      '@easymart/database':
         specifier: workspace:*
         version: link:../../packages/database
-      '@clicon/eslint-config':
+      '@easymart/eslint-config':
         specifier: workspace:*
         version: link:../../packages/configs/eslint
-      '@clicon/prettier-config':
+      '@easymart/prettier-config':
         specifier: workspace:*
         version: link:../../packages/configs/prettier
-      '@clicon/typescript-config':
+      '@easymart/typescript-config':
         specifier: workspace:*
         version: link:../../packages/configs/typescript
       '@react-router/dev':
@@ -239,10 +239,10 @@ importers:
         specifier: ^8.31.0
         version: 8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
     devDependencies:
-      '@clicon/prettier-config':
+      '@easymart/prettier-config':
         specifier: workspace:*
         version: link:../prettier
-      '@clicon/typescript-config':
+      '@easymart/typescript-config':
         specifier: workspace:*
         version: link:../typescript
       '@types/eslint':
@@ -282,7 +282,7 @@ importers:
         specifier: ^2.5.10
         version: 2.5.10(prettier@3.5.3)
     devDependencies:
-      '@clicon/typescript-config':
+      '@easymart/typescript-config':
         specifier: workspace:*
         version: link:../typescript
       '@types/node':
@@ -298,13 +298,13 @@ importers:
         specifier: 'catalog:'
         version: 8.5.0(jiti@2.4.2)(postcss@8.5.3)(tsx@4.19.3)(typescript@5.8.3)
     devDependencies:
-      '@clicon/eslint-config':
+      '@easymart/eslint-config':
         specifier: workspace:*
         version: link:../eslint
-      '@clicon/prettier-config':
+      '@easymart/prettier-config':
         specifier: workspace:*
         version: link:../prettier
-      '@clicon/typescript-config':
+      '@easymart/typescript-config':
         specifier: workspace:*
         version: link:../typescript
       eslint:
@@ -331,16 +331,16 @@ importers:
         specifier: 'catalog:'
         version: 3.24.4
     devDependencies:
-      '@clicon/eslint-config':
+      '@easymart/eslint-config':
         specifier: workspace:*
         version: link:../configs/eslint
-      '@clicon/prettier-config':
+      '@easymart/prettier-config':
         specifier: workspace:*
         version: link:../configs/prettier
-      '@clicon/tsup-config':
+      '@easymart/tsup-config':
         specifier: workspace:*
         version: link:../configs/tsup
-      '@clicon/typescript-config':
+      '@easymart/typescript-config':
         specifier: workspace:*
         version: link:../configs/typescript
       drizzle-kit:

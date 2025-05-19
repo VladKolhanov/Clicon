@@ -1,7 +1,7 @@
 {
-  "name": "clicon",
+  "name": "easymart",
   "private": true,
-  "description": "Clicon e-commerce project",
+  "description": "EasyMart e-commerce project",
   "license": "ISC",
   "author": "Vladyslav Kolhanov",
   "type": "module",
@@ -21,9 +21,9 @@
     "type-check": "turbo run type-check --continue",
     "postinstall": "turbo run build --filter=./packages/*"
   },
-  "prettier": "@clicon/prettier-config",
+  "prettier": "@easymart/prettier-config",
   "devDependencies": {
-    "@clicon/prettier-config": "workspace:*",
+    "@easymart/prettier-config": "workspace:*",
     "prettier": "catalog:",
     "turbo": "^2.5.2"
   },

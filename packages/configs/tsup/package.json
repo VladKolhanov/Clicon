@@ -1,5 +1,5 @@
 {
-  "name": "@clicon/tsup-config",
+  "name": "@easymart/tsup-config",
   "private": true,
   "type": "module",
   "exports": {
@@ -10,14 +10,14 @@
     "lint": "eslint",
     "type-check": "tsc --noEmit --pretty"
   },
-  "prettier": "@clicon/prettier-config",
+  "prettier": "@easymart/prettier-config",
   "dependencies": {
     "tsup": "catalog:"
   },
   "devDependencies": {
-    "@clicon/eslint-config": "workspace:*",
-    "@clicon/prettier-config": "workspace:*",
-    "@clicon/typescript-config": "workspace:*",
+    "@easymart/eslint-config": "workspace:*",
+    "@easymart/prettier-config": "workspace:*",
+    "@easymart/typescript-config": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"

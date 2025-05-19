@@ -1,7 +1,7 @@
 {
-  "name": "@clicon/api",
+  "name": "@easymart/api",
   "version": "1.0.0",
-  "description": "Backend application for the Clicon project",
+  "description": "Backend application for the EasyMart project",
   "license": "ISC",
   "author": "Vladyslav Kolhanov",
   "type": "module",
@@ -14,7 +14,7 @@
     "start": "node --env-file .env dist/index.js",
     "type-check": "tsc --noEmit --pretty"
   },
-  "prettier": "@clicon/prettier-config",
+  "prettier": "@easymart/prettier-config",
   "dependencies": {
     "compression": "^1.8.0",
     "cors": "^2.8.5",
@@ -26,11 +26,11 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@clicon/database": "workspace:*",
-    "@clicon/eslint-config": "workspace:*",
-    "@clicon/prettier-config": "workspace:*",
-    "@clicon/tsup-config": "workspace:*",
-    "@clicon/typescript-config": "workspace:*",
+    "@easymart/database": "workspace:*",
+    "@easymart/eslint-config": "workspace:*",
+    "@easymart/prettier-config": "workspace:*",
+    "@easymart/tsup-config": "workspace:*",
+    "@easymart/typescript-config": "workspace:*",
     "@types/compression": "^1.7.5",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",

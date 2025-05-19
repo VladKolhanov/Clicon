@@ -1,7 +1,7 @@
 {
-  "name": "@clicon/shop",
+  "name": "@easymart/shop",
   "private": true,
-  "description": "Frontend application for the Clicon project",
+  "description": "Frontend application for the EasyMart project",
   "license": "ISC",
   "author": "Vladyslav Kolhanov",
   "type": "module",
@@ -13,7 +13,7 @@
     "start": "react-router-serve ./build/server/index.js",
     "type-check": "react-router typegen && tsc"
   },
-  "prettier": "@clicon/prettier-config",
+  "prettier": "@easymart/prettier-config",
   "dependencies": {
     "@react-router/node": "catalog:react-router-7",
     "@react-router/serve": "catalog:react-router-7",
@@ -24,10 +24,10 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@clicon/database": "workspace:*",
-    "@clicon/eslint-config": "workspace:*",
-    "@clicon/prettier-config": "workspace:*",
-    "@clicon/typescript-config": "workspace:*",
+    "@easymart/database": "workspace:*",
+    "@easymart/eslint-config": "workspace:*",
+    "@easymart/prettier-config": "workspace:*",
+    "@easymart/typescript-config": "workspace:*",
     "@react-router/dev": "catalog:react-router-7",
     "@types/node": "catalog:node",
     "@types/react": "catalog:react-19",

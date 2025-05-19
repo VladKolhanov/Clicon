@@ -64,8 +64,8 @@ export default tseslint.config(
         {
           groups: [
             ['^\\u0000'],
-            ['^react', '^node:', '^(?!@clicon)(@?\\w)'],
-            ['^@clicon/\\w', '^#\\w', '^~/\\w'],
+            ['^react', '^node:', '^(?!@easymart)(@?\\w)'],
+            ['^@easymart/\\w', '^#\\w', '^~/\\w'],
             ['^./', '^../', '^.+\\.s?css$'],
           ],
         },
