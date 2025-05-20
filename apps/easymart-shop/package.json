@@ -6,21 +6,17 @@
   "author": "Vladyslav Kolhanov",
   "type": "module",
   "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
+    "build": "tsc -b && vite build",
+    "dev": "vite",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
-    "start": "react-router-serve ./build/server/index.js",
-    "type-check": "react-router typegen && tsc"
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit --pretty"
   },
   "prettier": "@easymart/prettier-config",
   "dependencies": {
-    "@react-router/node": "catalog:react-router-7",
-    "@react-router/serve": "catalog:react-router-7",
-    "isbot": "^5.1.27",
     "react": "catalog:react-19",
     "react-dom": "catalog:react-19",
-    "react-router": "catalog:react-router-7",
     "zod": "catalog:"
   },
   "devDependencies": {
@@ -28,14 +24,13 @@
     "@easymart/eslint-config": "workspace:*",
     "@easymart/prettier-config": "workspace:*",
     "@easymart/typescript-config": "workspace:*",
-    "@react-router/dev": "catalog:react-router-7",
-    "@types/node": "catalog:node",
     "@types/react": "catalog:react-19",
     "@types/react-dom": "catalog:react-19",
+    "@vitejs/plugin-react": "^4.4.1",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:",
-    "vite": "^6.3.3",
+    "vite": "^6.3.5",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }
