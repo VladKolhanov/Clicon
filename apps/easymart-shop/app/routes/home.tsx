@@ -1,8 +1,8 @@
-import { ENV } from '~/libs/env'
+import { ENV } from '~/configs/env'
 
 import type { Route } from './+types/home'
 
-interface HealthCheckData {
+type HealthCheckData = {
   timestamp: string
   uptime: number
   memoryUsage: Record<string, number>
@@ -11,7 +11,7 @@ interface HealthCheckData {
   pid: number
 }
 
-interface ResponseData {
+type ResponseData = {
   status: boolean
   message: string
   data: HealthCheckData
@@ -20,7 +20,6 @@ interface ResponseData {
 export async function clientLoader() {
   const res = await fetch(`${ENV.VITE_API_URL}/health`)
   const data = (await res.json()) as ResponseData
-
   return data.data
 }
 
