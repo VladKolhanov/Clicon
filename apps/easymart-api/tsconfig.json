@@ -1,3 +1,6 @@
 {
-  "extends": ["@easymart/typescript-config/base", "@easymart/typescript-config/api"]
+  "extends": [
+    "@easymart/typescript-config/base",
+    "@easymart/typescript-config/api"
+  ]
 }
