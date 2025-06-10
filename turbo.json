@@ -20,6 +20,9 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
+    "stylelint": {
+      "dependsOn": ["^stylelint"]
+    },
     "format": {
       "outputLogs": "new-only"
     },

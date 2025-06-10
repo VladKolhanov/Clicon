@@ -17,6 +17,8 @@
     "format:fix": "turbo run format --continue -- --write",
     "lint": "turbo run lint --continue",
     "lint:fix": "turbo run lint --continue -- --fix",
+    "stylelint": "turbo run stylelint --continue",
+    "stylelint:fix": "turbo run stylelint --continue -- --fix",
     "start": "turbo run start",
     "type-check": "turbo run type-check --continue",
     "postinstall": "turbo run build --filter=./packages/*"

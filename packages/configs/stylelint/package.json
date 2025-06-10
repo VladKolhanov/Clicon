@@ -1,0 +1,24 @@
+{
+  "name": "@easymart/stylelint-config",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "format": "prettier --check . --ignore-path ../../../.gitignore",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "stylelint": "catalog:",
+    "stylelint-config-standard": "^38.0.0"
+  },
+  "devDependencies": {
+    "@easymart/eslint-config": "workspace:*",
+    "@easymart/prettier-config": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:"
+  },
+  "prettier": "@easymart/prettier-config",
+  "packageManager": "pnpm@10.10.0"
+}

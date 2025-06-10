@@ -5,6 +5,7 @@ packages:
 
 catalog:
   eslint: ^9.25.1
+  stylelint: ^16.20.0
   typescript: ^5.8.3
   prettier: ^3.5.3
   zod: ^3.24.4
