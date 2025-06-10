@@ -21,13 +21,20 @@
     "stylelint:fix": "turbo run stylelint --continue -- --fix",
     "start": "turbo run start",
     "type-check": "turbo run type-check --continue",
-    "postinstall": "turbo run build --filter=./packages/*"
+    "test": "turbo run test --continue",
+    "test:watch": "turbo run test -- --watch",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "postinstall": "turbo run build --filter=./packages/**/*"
   },
   "prettier": "@easymart/prettier-config",
   "devDependencies": {
     "@easymart/prettier-config": "workspace:*",
+    "@vitest/coverage-istanbul": "catalog:testing",
+    "@vitest/ui": "catalog:testing",
     "prettier": "catalog:",
-    "turbo": "^2.5.2"
+    "turbo": "^2.5.2",
+    "vitest": "catalog:testing"
   },
   "packageManager": "pnpm@10.10.0"
 }

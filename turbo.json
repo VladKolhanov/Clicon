@@ -41,6 +41,20 @@
     "db:studio": {
       "persistent": true,
       "cache": false
+    },
+    "test": {
+      "dependsOn": ["^test"]
+    },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "test:coverage": {
+      "outputs": ["coverage/**"]
+    },
+    "test:ui": {
+      "cache": false,
+      "persistent": true
     }
   },
   "globalEnv": [
