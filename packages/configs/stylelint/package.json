@@ -9,6 +9,7 @@
     "format": "prettier --check . --ignore-path ../../../.gitignore",
     "lint": "eslint"
   },
+  "prettier": "@easymart/prettier-config",
   "dependencies": {
     "stylelint": "catalog:",
     "stylelint-config-standard": "^38.0.0"
@@ -16,9 +17,10 @@
   "devDependencies": {
     "@easymart/eslint-config": "workspace:*",
     "@easymart/prettier-config": "workspace:*",
+    "@easymart/typescript-config": "workspace:*",
     "eslint": "catalog:",
-    "prettier": "catalog:"
+    "prettier": "catalog:",
+    "typescript": "catalog:"
   },
-  "prettier": "@easymart/prettier-config",
   "packageManager": "pnpm@10.10.0"
 }

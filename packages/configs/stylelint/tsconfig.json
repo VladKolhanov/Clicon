@@ -1,0 +1,3 @@
+{
+  "extends": "@easymart/typescript-config/base"
+}
