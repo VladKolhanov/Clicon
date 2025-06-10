@@ -32,7 +32,6 @@
   "exclude": [
     "${configDir}/node_modules",
     "${configDir}/build/**/*",
-    "${configDir}/dist/**/*",
-    "${configDir}/**/*.test.ts"
+    "${configDir}/dist/**/*"
   ]
 }
