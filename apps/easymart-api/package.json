@@ -12,6 +12,7 @@
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
     "start": "node --env-file .env dist/index.js",
+    "test": "vitest",
     "type-check": "tsc --noEmit --pretty"
   },
   "prettier": "@easymart/prettier-config",
@@ -39,8 +40,8 @@
     "eslint": "catalog:",
     "prettier": "catalog:",
     "tsup": "catalog:",
-    "vitest": "catalog:testing",
     "tsx": "^4.19.3",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vitest": "catalog:testing"
   }
 }

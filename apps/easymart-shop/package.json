@@ -11,7 +11,7 @@
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
     "start": "react-router-serve ./build/server/index.js",
-    "stylelint": "stylelint \"**/*.css\"",
+    "stylelint": "stylelint \"**/*.css\" --ignore-path ../../.gitignore",
     "test": "vitest",
     "type-check": "react-router typegen && tsc"
   },
