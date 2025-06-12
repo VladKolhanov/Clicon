@@ -39,6 +39,7 @@
     "eslint": "catalog:",
     "prettier": "catalog:",
     "tsup": "catalog:",
+    "vitest": "catalog:testing",
     "tsx": "^4.19.3",
     "typescript": "catalog:"
   }

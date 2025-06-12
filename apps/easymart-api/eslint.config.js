@@ -1,3 +1,7 @@
-import { baseConfig, restrictEnvAccess } from '@easymart/eslint-config'
+import {
+  baseConfig,
+  restrictEnvAccess,
+  vitestConfig,
+} from '@easymart/eslint-config'
 
-export default [...baseConfig, ...restrictEnvAccess]
+export default [...baseConfig, ...vitestConfig, ...restrictEnvAccess]
