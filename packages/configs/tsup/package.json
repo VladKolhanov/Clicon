@@ -3,9 +3,13 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "types": "./dist/base.d.ts",
+      "default": "./dist/base.js"
+    }
   },
   "scripts": {
+    "build": "pnpm run lint && pnpm run type-check && tsup",
     "format": "prettier --check . --ignore-path ../../../.gitignore",
     "lint": "eslint",
     "type-check": "tsc --noEmit --pretty"

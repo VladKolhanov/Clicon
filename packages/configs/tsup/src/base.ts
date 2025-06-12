@@ -1,6 +1,6 @@
 import { defineConfig } from 'tsup'
 
-export default defineConfig({
+export const baseConfig = defineConfig({
   outDir: './dist',
   splitting: false,
   bundle: true,

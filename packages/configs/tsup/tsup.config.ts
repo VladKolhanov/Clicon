@@ -1,7 +1,9 @@
-import { baseConfig } from '@easymart/tsup-config'
 import { defineConfig } from 'tsup'
+
+import { baseConfig } from './src/base'
 
 export default defineConfig({
   ...baseConfig,
-  entry: ['./src/index.ts'],
+  entry: ['./src/base.ts'],
+  dts: true,
 })
