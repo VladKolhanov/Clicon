@@ -15,6 +15,7 @@
     "dev": "turbo run dev",
     "format": "turbo run format --continue",
     "format:fix": "turbo run format --continue -- --write",
+    "i18n": "turbo run i18n",
     "postinstall": "turbo run build --filter=./packages/**/*",
     "lint": "turbo run lint --continue",
     "lint:fix": "turbo run lint --continue -- --fix",

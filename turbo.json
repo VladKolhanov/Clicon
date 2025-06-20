@@ -55,6 +55,9 @@
     "test:ui": {
       "cache": false,
       "persistent": true
+    },
+    "i18n": {
+      "outputs": ["**/@types/resources.d.ts"]
     }
   },
   "globalEnv": [

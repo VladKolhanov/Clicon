@@ -10,6 +10,7 @@ import {
 import { isDev } from '~/configs/env'
 
 import type { Route } from './+types/root'
+import '~/i18n/config.ts'
 import '~/styles/root.css'
 
 export function Layout({ children }: { children: React.ReactNode }) {
