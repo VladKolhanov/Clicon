@@ -16,7 +16,7 @@
     "format": "turbo run format --continue",
     "format:fix": "turbo run format --continue -- --write",
     "i18n": "turbo run i18n",
-    "postinstall": "turbo run build --filter=./packages/**/*",
+    "postinstall": "turbo run build --filter=./packages/**/* && pnpm run i18n",
     "lint": "turbo run lint --continue",
     "lint:fix": "turbo run lint --continue -- --fix",
     "prepare": "husky",

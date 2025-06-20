@@ -16,7 +16,7 @@ const resources: Record<I18nNamespacesType, TranslationResource> = {
   validation: enValidationTranslations,
 }
 
-await i18n.use(initReactI18next).init({
+void i18n.use(initReactI18next).init({
   lng: I18nDefaultLanguage,
   fallbackLng: I18nDefaultLanguage,
   ns: I18nNamespaces,

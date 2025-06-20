@@ -19,7 +19,7 @@ export type I18nNamespacesType = (typeof I18nNamespaces)[number]
 export type I18nLanguagesType =
   (typeof I18nLanguages)[keyof typeof I18nLanguages]
 
-await i18n
+void i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .use(
