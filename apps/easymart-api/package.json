@@ -8,10 +8,10 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "pnpm run lint && pnpm run type-check && tsup",
-    "dev": "tsx --watch --env-file .env src/index.ts",
+    "dev": "tsx --watch --env-file .env.development src/index.ts",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
-    "start": "node --env-file .env dist/index.js",
+    "start": "node --env-file .env.production dist/index.js",
     "test": "vitest",
     "type-check": "tsc --noEmit --pretty"
   },

@@ -1,5 +1,5 @@
 {
-  "id": "95d14206-4db8-464d-ac04-e10c52059f0d",
+  "id": "daf0068f-b7f4-493d-afc9-5258b6c2ed17",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -14,8 +14,8 @@
           "primaryKey": true,
           "notNull": true
         },
-        "name": {
-          "name": "name",
+        "title": {
+          "name": "title",
           "type": "varchar(100)",
           "primaryKey": false,
           "notNull": true
@@ -30,7 +30,7 @@
           "name": "image_url",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "updated_at": {
           "name": "updated_at",
@@ -70,8 +70,8 @@
           "primaryKey": true,
           "notNull": true
         },
-        "name": {
-          "name": "name",
+        "title": {
+          "name": "title",
           "type": "varchar(100)",
           "primaryKey": false,
           "notNull": true
@@ -84,15 +84,16 @@
         },
         "price": {
           "name": "price",
-          "type": "numeric(10, 2)",
+          "type": "numeric(6, 2)",
           "primaryKey": false,
           "notNull": true
         },
-        "discount_percent": {
-          "name": "discount_percent",
-          "type": "numeric(3, 1)",
+        "discount": {
+          "name": "discount",
+          "type": "numeric(2, 0)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": false,
+          "default": "'0'"
         },
         "in_stock": {
           "name": "in_stock",
@@ -103,7 +104,7 @@
         },
         "thumbnail_url": {
           "name": "thumbnail_url",
-          "type": "json",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },
@@ -111,7 +112,7 @@
           "name": "image_urls",
           "type": "json",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "category_id": {
           "name": "category_id",
@@ -134,7 +135,17 @@
         }
       },
       "indexes": {},
-      "foreignKeys": {},
+      "foreignKeys": {
+        "products_category_id_categories_id_fk": {
+          "name": "products_category_id_categories_id_fk",
+          "tableFrom": "products",
+          "tableTo": "categories",
+          "columnsFrom": ["category_id"],
+          "columnsTo": ["id"],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "products_slug_unique": {

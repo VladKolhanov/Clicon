@@ -18,9 +18,9 @@ const timestamps = {
 
 export const categories = pgTable('categories', {
   id: serial().primaryKey(),
-  name: varchar({ length: 100 }).notNull(),
+  title: varchar({ length: 100 }).notNull(),
   slug: varchar({ length: 100 }).notNull().unique(),
-  imageUrl: text(),
+  imageUrl: text('image_url').notNull(),
   ...timestamps,
 })
 
@@ -30,14 +30,14 @@ export const categoriesRelations = relations(categories, ({ many }) => ({
 
 export const products = pgTable('products', {
   id: serial().primaryKey(),
-  name: varchar({ length: 100 }).notNull(),
+  title: varchar({ length: 100 }).notNull(),
   slug: varchar({ length: 110 }).notNull().unique(),
-  price: numeric({ precision: 10, scale: 2 }).notNull(),
-  discountPercent: numeric({ precision: 3, scale: 1 }),
-  inStock: boolean().default(true),
-  thumbnailUrl: text(),
-  imageUrls: json().$type<string[]>().notNull(),
-  categoryId: integer().notNull(),
+  price: numeric({ precision: 6, scale: 2 }).notNull(),
+  discount: numeric({ precision: 2, scale: 0 }).default('0'),
+  inStock: boolean('in_stock').default(true),
+  thumbnailUrl: text('thumbnail_url'),
+  imageUrls: json('image_urls').$type<string[]>().notNull(),
+  categoryId: integer('category_id').references(() => categories.id),
   ...timestamps,
 })
 

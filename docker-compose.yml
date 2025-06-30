@@ -1,0 +1,19 @@
+name: easymart
+services:
+  db:
+    image: postgres:17-bookworm
+    container_name: easymart-db
+    restart: unless-stopped
+    ports:
+      - '5432:5432'
+    env_file: './apps/easymart-api/.env.development'
+    volumes:
+      - db:/var/lib/postgresql/data
+    networks:
+      - backend
+
+volumes:
+  db: {}
+
+networks:
+  backend: {}
