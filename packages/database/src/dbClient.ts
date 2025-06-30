@@ -4,12 +4,12 @@ import {
 } from 'drizzle-orm/neon-http'
 import {
   drizzle as pgDriver,
-  type PostgresJsDatabase,
-} from 'drizzle-orm/postgres-js'
+  type NodePgDatabase,
+} from 'drizzle-orm/node-postgres'
 
 import { ENV } from './env'
 
-type DatabaseClient = NeonHttpDatabase | PostgresJsDatabase
+type DatabaseClient = NeonHttpDatabase | NodePgDatabase
 
 function createDbClient(): DatabaseClient {
   const isProd = ENV.NODE_ENV === 'production'
