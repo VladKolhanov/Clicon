@@ -1,4 +1,4 @@
-import { ENV, isDev } from '~/libs/env'
+import { ENV, isDev } from '~/config/env'
 
 export const HttpCode = {
   OK: 200,

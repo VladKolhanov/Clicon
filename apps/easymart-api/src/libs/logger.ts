@@ -1,7 +1,7 @@
 import { createLogger, format, transports } from 'winston'
 import DailyRotateFile from 'winston-daily-rotate-file'
 
-import { ENV } from '~/libs/env'
+import { ENV } from '~/config/env'
 
 const { combine, json, timestamp, printf, errors } = format
 

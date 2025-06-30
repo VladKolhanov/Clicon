@@ -1,7 +1,7 @@
 import type { Response } from 'express'
 
 import { HttpCode, type HttpCodeNames, type HttpCodesType } from '~/config'
-import { isDev } from '~/libs/env'
+import { isDev } from '~/config/env'
 
 interface CreateApiResponse {
   httpCodeName: Lowercase<HttpCodeNames>

@@ -7,14 +7,20 @@ const envSchema = z.object({
     .enum(['development', 'production', 'test'])
     .default('development'),
   DATABASE_URL: z.string().url({
-    message: 'DATABASE_URL must be a valid URL',
+    message: 'must be a valid URL',
   }),
 })
 
 const parsedEnv = envSchema.safeParse(process.env)
 
 if (!parsedEnv.success) {
-  console.error('❌ Invalid environment variables:', parsedEnv.error.format())
+  const formattedErrorMessages = parsedEnv.error.errors.map(
+    (err) => `${err.path.join(' && ')}: ${err.message}`
+  )
+
+  const errorMessage = `❌ Invalid environment variables:\n${formattedErrorMessages.join('\n')}`
+
+  console.error(errorMessage)
   process.exit(1)
 }
 

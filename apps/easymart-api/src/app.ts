@@ -3,7 +3,7 @@ import cors from 'cors'
 import express, { type Express } from 'express'
 
 import { corsOptions } from '~/config'
-import { ENV } from '~/libs/env'
+import { ENV } from '~/config/env'
 import { logger } from '~/libs/logger'
 import { errorHandler } from '~/middlewares/errorHandler'
 import { httpLoggerMiddleware } from '~/middlewares/httpLogger'
