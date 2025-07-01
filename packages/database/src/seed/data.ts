@@ -1,4 +1,4 @@
-import { generateImageUrl } from '../utils'
+import { generateImageUrl } from '@easymart/utils'
 
 export const CATEGORIES_QTY = 10
 export const PRODUCTS_PER_CATEGORY = 20

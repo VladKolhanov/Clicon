@@ -2,6 +2,8 @@ import 'dotenv/config'
 
 import z from 'zod'
 
+import { formatEnvErrors } from '@easymart/utils'
+
 const envSchema = z.object({
   NODE_ENV: z
     .enum(['development', 'production', 'test'])
@@ -14,11 +16,7 @@ const envSchema = z.object({
 const parsedEnv = envSchema.safeParse(process.env)
 
 if (!parsedEnv.success) {
-  const formattedErrorMessages = parsedEnv.error.errors.map(
-    (err) => `${err.path.join(' && ')}: ${err.message}`
-  )
-
-  const errorMessage = `❌ Invalid environment variables:\n${formattedErrorMessages.join('\n')}`
+  const errorMessage = formatEnvErrors(parsedEnv.error.errors)
 
   console.error(errorMessage)
   process.exit(1)

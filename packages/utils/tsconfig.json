@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@easymart/typescript-config/base",
+    "@easymart/typescript-config/declaration-only"
+  ]
+}

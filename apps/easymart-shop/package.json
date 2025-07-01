@@ -18,6 +18,7 @@
   },
   "prettier": "@easymart/prettier-config",
   "dependencies": {
+    "@easymart/database": "workspace:*",
     "@react-router/node": "catalog:react-router-7",
     "@react-router/serve": "catalog:react-router-7",
     "i18next": "^25.2.1",
@@ -31,11 +32,11 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@easymart/database": "workspace:*",
     "@easymart/eslint-config": "workspace:*",
     "@easymart/prettier-config": "workspace:*",
     "@easymart/stylelint-config": "workspace:*",
     "@easymart/typescript-config": "workspace:*",
+    "@easymart/utils": "workspace:*",
     "@react-router/dev": "catalog:react-router-7",
     "@testing-library/jest-dom": "catalog:testing",
     "@testing-library/react": "catalog:testing",
