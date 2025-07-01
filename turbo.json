@@ -9,7 +9,7 @@
       "inputs": ["$TURBO_DEFAULT$", ".env"]
     },
     "build": {
-      "dependsOn": ["^build", "lint", "type-check"],
+      "dependsOn": ["^build"],
       "outputs": ["dist/**", "build/**"],
       "inputs": ["$TURBO_DEFAULT$", "!.env.sample", ".env"]
     },

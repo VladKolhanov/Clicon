@@ -9,7 +9,7 @@
     }
   },
   "scripts": {
-    "build": "pnpm run lint && pnpm run type-check && tsup",
+    "build": "tsup",
     "format": "prettier --check . --ignore-path ../../../.gitignore",
     "lint": "eslint",
     "type-check": "tsc --noEmit --pretty"

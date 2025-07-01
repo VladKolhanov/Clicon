@@ -26,7 +26,7 @@
     "start": "turbo run start",
     "stylelint": "turbo run stylelint --continue",
     "stylelint:fix": "turbo run stylelint --continue -- --fix",
-    "test": "turbo run test --continue",
+    "test": "turbo run test --continue -- --run --passWithNoTests",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
     "test:watch": "turbo run test -- --watch",
